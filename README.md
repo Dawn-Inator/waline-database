@@ -1,41 +1,13 @@
-# Waline Example
+## 官方链接：https://waline.js.org/
 
-This directory is a brief example of a [Waline](https://waline.js.org/) app that can be deployed with Vercel and zero configuration.
+***waline是一个快速部署博客评论数据库的应用，waline+LeanCloud+vercel可以实现一键零成本快速搭建***
 
-## Deploy Your Own
+## waline功能
+- 评论存储，一键链接LeanCloud数据库
+- 登录管理，自带接入第三方登录
 
-Deploy your own Waline project with Vercel.
+## 使用建议：
+- 前端：Hexo(Aurora)+vercel
+- 后端：waline+LeanCloud+vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/walinejs/waline/tree/main/example)
-
-### How We Created This Example
-
-```js
-//index.js
-const Waline = require('@waline/vercel');
-module.exports = Waline();
-
-//vercel.json
-{
-  "builds": [
-    {
-      "src": "index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
-    }
-  ]
-}
-```
-
-### Deploying From Your Terminal
-
-You can deploy your new Waline project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-vercel
-```
+**实现丝滑搭建博客**
